@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Three City Fun Zone</title>
+    <link rel="stylesheet" th:href="@{styles.css}">
+</head>
+<body>
+
+    <div>
+        <!--
+        <button type="button" th:href="@{/RegisterLoginPage.html}">Organizator</button>
+        <button type="button">Uczestnik</button>
+        -->
+        <a th:href="@{/RegisterLoginPage}">Organizator</a>
+        <!--<input type="button" th:href="@{/UsersRegisterLoginPage}" th:value="Uczestnik">-->
+        <!--<button th:href="@{/UsersRegisterLoginPage}">Uczestnik</button>-->
+        <input type="submit" th:value="Uczestnik"  th:href="@{/UsersRegisterLoginPage}" />
+    </div>
+
+</body>
+</html>
