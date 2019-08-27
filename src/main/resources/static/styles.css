@@ -26,3 +26,78 @@ button.mainPageButton{
     height: 50%;
     width: 50%;
 }
+
+button.mainPageButton:hover{
+    background-color: lightgreen;
+    color: red;
+}
+
+li a {
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 1.2em;
+    width: 130px;
+    text-decoration: none;
+    color: aqua;
+    /*background-color: blue;*/
+    padding: 10px 15px;
+    margin: 0px 1px 1px 0px;
+    border: 1px solid navy;
+    border-radius: 1px;
+    /*
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0px 2px 3px gray;
+    -moz-box-shadow: 0px 2px 3px gray;
+    -webkit-box-shadow: 0px 2px 3px gray;
+    */
+}
+
+li a:hover {
+    color: blue;
+    background: aqua;
+}
+
+.dropDown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropDownButton{
+    background-color: blue;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropDownButton:hover{
+    background-color: aqua;
+    color: black;
+}
+
+.dropDownList{
+    display: none;
+    position: absolute;
+    background-color: blue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropDown:hover .dropDownList{
+    display: block;
+}
+
+.dropDownList a{
+    color: red;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropDownList a:hover {
+    background-color: aqua;
+}

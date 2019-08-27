@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="header">
+<head th:fragment="links">
     <meta charset="UTF-8">
     <title>Three City Fun Zone</title>
     <link rel="stylesheet" th:href="@{styles.css}">
-    <h2 th:class="advertisement">Welcome in the biggest Fun Zone in the whole 3City</h2>
 </head>
 <body>
+<nav th:fragment="header">
+    <h2 th:class="advertisement">Welcome in the biggest Fun Zone in the whole 3City</h2>
+    <div>
+        <ul>
+            <li th:class="dropDown">
+                <form th:action="@{/}">
+                    <button th:class="dropDownButton">Home</button>
+                </form>
+            </li>
+            <li th:class="dropDown">
+                <button th:class="dropDownButton">Fun Zone</button>
+                <div th:class="dropDownList">
+                    <a th:href="@{/ImprovisationPage}">Impro</a>
+                    <a th:href="@{/StandUpPage}">Stand Up</a>
+                    <a th:href="@{/CabaretPage}">Kabaret</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</nav>
 
     <div>
         <form th:action="@{/RegisterLoginPage}">

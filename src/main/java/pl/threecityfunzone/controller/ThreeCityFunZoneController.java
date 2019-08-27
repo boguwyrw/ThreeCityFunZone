@@ -17,4 +17,13 @@ public class ThreeCityFunZoneController {
 
     @GetMapping(path = "/UsersRegisterLoginPage")
     public String usersRegisterLoginPage (Model model) {return "UsersRegisterLoginPage";}
+
+    @GetMapping(path = "/ImprovisationPage")
+    public String improvisationPage (Model model) {return "ImprovisationPage";}
+
+    @GetMapping(path = "/StandUpPage")
+    public String standUpPage (Model model) {return "StandUpPage";}
+
+    @GetMapping(path = "/CabaretPage")
+    public String cabaretPage (Model model) {return "CabaretPage";}
 }
