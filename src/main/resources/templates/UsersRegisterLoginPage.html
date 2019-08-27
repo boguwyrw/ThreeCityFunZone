@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="FunZoneMainPage :: header">
     <meta charset="UTF-8">
     <title>Users Register and Login Page</title>
 </head>
@@ -8,5 +8,6 @@
 
     <p>To jest strona rejestracji i logowania dla uzytkownikow</p>
 
+<footer th:replace="FunZoneMainPage :: footer"></footer>
 </body>
 </html>

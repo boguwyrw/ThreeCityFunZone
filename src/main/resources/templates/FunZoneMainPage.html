@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:fragment="header">
     <meta charset="UTF-8">
     <title>Three City Fun Zone</title>
     <link rel="stylesheet" th:href="@{styles.css}">
+    <h2 th:class="advertisement">Welcome in the biggest Fun Zone in the whole 3City</h2>
 </head>
 <body>
 
     <div>
-        <!--
-        <button type="button" th:href="@{/RegisterLoginPage.html}">Organizator</button>
-        <button type="button">Uczestnik</button>
-        -->
-        <a th:href="@{/RegisterLoginPage}">Organizator</a>
-        <!--<input type="button" th:href="@{/UsersRegisterLoginPage}" th:value="Uczestnik">-->
-        <!--<button th:href="@{/UsersRegisterLoginPage}">Uczestnik</button>-->
-        <input type="submit" th:value="Uczestnik"  th:href="@{/UsersRegisterLoginPage}" />
+        <form th:action="@{/RegisterLoginPage}">
+            <!--<button th:type="submit">Organizator</button>-->
+            <button th:class="mainPageButton">Organizator</button>
+        </form>
+
+        <form th:action="@{/UsersRegisterLoginPage}">
+            <!--<input th:type="submit" th:value="Uczestnik"/>-->
+            <button th:class="mainPageButton">Uczestnik</button>
+        </form>
     </div>
+
+<footer th:fragment="footer">
+    <p>Created by boguwyrw</p>
+</footer>
 
 </body>
 </html>
