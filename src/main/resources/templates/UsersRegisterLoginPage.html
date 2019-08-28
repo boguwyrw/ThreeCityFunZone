@@ -2,12 +2,22 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="FunZoneMainPage :: links">
     <meta charset="UTF-8">
-    <title>Users Register and Login Page</title>
+    <title th:text="${pageTitle}">Users Register and Login Page</title>
 </head>
 <body>
 <div th:replace="FunZoneMainPage :: header"></div>
 
     <p>To jest strona rejestracji i logowania dla uzytkownikow</p>
+
+    <div>
+        <form th:action="@{/UsersRegisterLoginPage/UsersRegisterPage}">
+            <button th:class="mainPageButton">Zarejestruj</button>
+        </form>
+
+        <form th:action="@{/UsersRegisterLoginPage/UsersLoginPage}">
+            <button th:class="mainPageButton">Zaloguj</button>
+        </form>
+    </div>
 
 <footer th:replace="FunZoneMainPage :: footer"></footer>
 </body>
