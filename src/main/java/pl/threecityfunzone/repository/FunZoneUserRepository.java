@@ -1,4 +1,3 @@
-/*
 package pl.threecityfunzone.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -8,7 +7,7 @@ import java.util.Optional;
 
 public interface FunZoneUserRepository extends JpaRepository<FunZoneUser, Long> {
 
-    Optional<FunZoneUser> findFunZoneUserByFunUserName(String funUserName);
+    //Optional<FunZoneUser> findFunZoneUserByFunUserName(String funUserName);
 
 }
-*/
+
