@@ -18,20 +18,20 @@ public class FunZoneUserController {
     @Autowired
     private FunZoneUserService funZoneUserService;
 
-    @GetMapping(path = "/UsersRegisterLoginPage/UsersRegisterPage")
+    @GetMapping(path = "/UsersRegisterPage")
     public String usersRegisterPage (Model model) {
         pageTitle = "Users Register Page";
         model.addAttribute("pageTitle", pageTitle);
         return "UsersRegisterPage";
     }
 
-    @PostMapping(path = "/UsersRegisterLoginPage/UsersRegisterPage")
+    @PostMapping(path = "/UsersRegisterPage")
     public String usersRegisterPage(Model model, FunZoneUser funZoneUser){
         funZoneUserService.saveFunZoneUser(funZoneUser);
         return "redirect:/UsersRegisterLoginPage";
     }
 
-    @GetMapping(path = "/UsersRegisterLoginPage/UsersLoginPage")
+    @GetMapping(path = "/UsersLoginPage")
     public String usersLoginPage (Model model) {
         pageTitle = "Users Login Page";
         model.addAttribute("pageTitle", pageTitle);
