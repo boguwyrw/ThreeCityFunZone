@@ -7,11 +7,12 @@
 <body>
 <div th:replace="FunZoneMainPage :: header"></div>
 
+
+    <p th:class="register-login">To jest strona rejestracji dla uzytkownikow</p>
+
     <div th:class="register-login">
-    <p>To jest strona rejestracji dla uzytkownikow</p>
-    </div>
     <form th:action="@{/usersRegisterPage}" th:object="${person}" method="post">
-        <div th:class="register-login">
+        <div>
             <div>
                 <label for="name">Imie</label>
             </div>
@@ -34,7 +35,7 @@
     </form>
 
     <form th:action="@{usersRegisterPage}" th:object="${funZoneUserDTO}" method="post">
-        <div th:class="register-login">
+        <div>
             <div>
                 <label for="userName">Nazwa uzytkownika</label>
             </div>
@@ -55,6 +56,7 @@
             </div>
         </div>
     </form>
+    </div>
 
 <footer th:replace="FunZoneMainPage :: footer"></footer>
 </body>

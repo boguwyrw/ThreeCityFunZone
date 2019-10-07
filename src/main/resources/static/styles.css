@@ -95,5 +95,10 @@ li a:hover {
 }
 
 .register-login {
-    margin: auto;
+    border: none;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    height: 50%;
+    width: 50%;
 }
