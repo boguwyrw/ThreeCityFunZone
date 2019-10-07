@@ -30,7 +30,7 @@ public class FunZoneUserController {
         Person person = new Person();
         model.addAttribute("person", person);
         FunZoneUserDTO funZoneUserDTO = new FunZoneUserDTO();
-        model.addAttribute("funZoneUser", funZoneUserDTO);
+        model.addAttribute("funZoneUserDTO", funZoneUserDTO);
         return "UsersRegisterPage";
     }
 
