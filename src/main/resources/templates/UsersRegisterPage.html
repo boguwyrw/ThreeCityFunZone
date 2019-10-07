@@ -7,8 +7,63 @@
 <body>
 <div th:replace="FunZoneMainPage :: header"></div>
 
-<p>To jest strona rejestracji dla uzytkownikow</p>
+    <p>To jest strona rejestracji dla uzytkownikow</p>
+    <form th:action="@{/usersRegisterPage}" th:object="${person}" method="post">
+        <div>
+            <div>
+                <label for="name">Imie</label>
+            </div>
+            <div>
+                <input id="name" type="text" th:field="*{firstName}">
+            </div>
+            <div>
+                <label for="surname">Nazwisko</label>
+            </div>
+            <div>
+                <input id="surname" type="text" th:field="*{lastName}">
+            </div>
+            <div>
+                <label for="DateOfBirth">Data urodzenia</label>
+            </div>
+            <div>
+                <input id="DateOfBirth" type="date" th:field="*{birthDate}">
+            </div>
+        </div>
+    </form>
 
+    <form th:action="@{usersRegisterPage}" th:object="${funZoneUserDTO}" method="post">
+        <div>
+            <label for="userName">Nazwa uzytkownika</label>
+        </div>
+        <div>
+            <input id="userName" type="text" th:field="*{funUserName}">
+        </div>
+    </form>
+
+<!--
+    <form th:action="@{usersRegisterPage}" th:object="${funZoneUserDTO}" method="post">
+        <div>
+            <div>
+                <label for="userName">Nazwa uzytkownika</label>
+            </div>
+            <div>
+                <input id="userName" type="text" th:field="*{funZoneUsername}">
+            </div>
+            <div>
+                <label for="password">Haslo</label>
+            </div>
+            <div>
+                <input id="password" type="password" th:field="*{password}">
+            </div>
+            <div>
+                <label for="confirm-password">Potwierdz haslo</label>
+            </div>
+            <div>
+                <input id="confirm-password" type="password" th:field="*{confirm_password}">
+            </div>
+        </div>
+    </form>
+-->
 <footer th:replace="FunZoneMainPage :: footer"></footer>
 </body>
 </html>

@@ -1,43 +1,36 @@
 package pl.threecityfunzone.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
+@NoArgsConstructor
+@Data
+@Entity
 public class Person {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long personId;
+    @NotNull
     private String firstName;
+    @NotNull
     private String lastName;
+    @NotNull
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private Date birthDate;
 
-    public Person() {
-    }
-
-    public Person(String firstName, String lastName, Date birthDate) {
+    public Person(@NotNull String firstName, @NotNull String lastName, @NotNull Date birthDate) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthDate = birthDate;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public Date getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 }
