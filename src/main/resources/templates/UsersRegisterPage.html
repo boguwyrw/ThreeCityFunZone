@@ -3,6 +3,7 @@
 <head th:replace="FunZoneMainPage :: links">
     <meta charset="UTF-8">
     <title th:text="${pageTitle}">Users Register Page</title>
+    <script th:src="@{js/submitForm.js}"></script>
 </head>
 <body>
 <div th:replace="FunZoneMainPage :: header"></div>
@@ -11,7 +12,7 @@
     <p th:class="register-login">To jest strona rejestracji dla uzytkownikow</p>
 
     <div th:class="register-login">
-    <form th:action="@{/usersRegisterPage}" th:object="${person}" method="post">
+    <form id="Person" th:action="@{/usersRegisterPage}" th:object="${person}" method="post">
         <div>
             <div>
                 <label for="name">Imie</label>
@@ -32,9 +33,12 @@
                 <input id="DateOfBirth" type="date" th:field="*{birthDate}">
             </div>
         </div>
+        <div>
+            <input type="submit" value="Zapisz Osobe">
+        </div>
     </form>
 
-    <form th:action="@{usersRegisterPage}" th:object="${funZoneUserDTO}" method="post">
+    <form id="User" th:action="@{usersRegisterPage}" th:object="${funZoneUserDTO}" method="post">
         <div>
             <div>
                 <label for="userName">Nazwa uzytkownika</label>
@@ -55,7 +59,16 @@
                 <input id="confirm-password" type="password" th:field="*{confirmFunUserPassword}">
             </div>
         </div>
+        <div>
+            <input type="submit" value="Zapisz Usera">
+        </div>
     </form>
+        <!--
+        <div>
+            <button th:onclick="mySubmit()">Zapisz</button>
+            <input type="button" onclick="mySubmit()" value="Zapisz"/>
+        </div>
+        -->
     </div>
 
 <footer th:replace="FunZoneMainPage :: footer"></footer>
