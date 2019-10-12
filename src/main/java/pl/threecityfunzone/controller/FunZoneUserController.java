@@ -5,12 +5,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import pl.threecityfunzone.model.FunZoneUserDTO;
 import pl.threecityfunzone.model.Person;
 import pl.threecityfunzone.service.FunZoneUserService;
 import pl.threecityfunzone.service.PersonService;
 
 @Controller
+//@RequestMapping(path = "/FunZoneMainPage/UsersRegisterLoginPage/")
 public class FunZoneUserController {
 
     private String pageTitle = "";
@@ -36,7 +38,7 @@ public class FunZoneUserController {
     public String usersRegisterPage(Model model, Person person, FunZoneUserDTO funZoneUserDTO){
         personService.savePerson(person);
         funZoneUserService.saveFunZoneUser(funZoneUserDTO);
-        return "redirect:/UsersRegisterLoginPage";
+        return "redirect:/TestPage/";
     }
 
     @GetMapping(path = "/UsersLoginPage")

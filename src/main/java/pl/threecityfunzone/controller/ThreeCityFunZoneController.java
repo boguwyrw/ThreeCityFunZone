@@ -3,19 +3,26 @@ package pl.threecityfunzone.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class ThreeCityFunZoneController {
 
     private String pageTitle = "";
 
+    @RequestMapping(path = "/", method = RequestMethod.GET)
+    public String mainPage(){
+        return "FunZoneMainPage";
+    }
+/*
     @GetMapping(path = "/")
     public String funZoneMainPage(Model model){
         pageTitle = "Three City Fun Zone";
         model.addAttribute("pageTitle", pageTitle);
         return "FunZoneMainPage";
     }
-
+*/
     @GetMapping(path = "/RegisterLoginPage")
     public String registerLoginPage (Model model) {
         pageTitle = "Register and Login Page";
